@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code Editor</title>
+    <link rel="stylesheet" href="codepencss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/a389548c9d.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </head>
+<body>
+  <h1 class="hea">Live Code Editor</h1>
+
+  <div class="container">
+
+    <!-- SIDEBAR-->
+ 
+    <div class="left">
+            
+
+        <label for=""><i class="fa-brands fa-html5"></i> HTML</label>
+        <textarea  id="html-code" onkeyup="run()"></textarea>
+    
+        <label for=""><i class="fa-brands fa-css3"></i> CSS</label>
+        <textarea  id="css-code" onkeyup="run()"></textarea>
+    
+    
+        <label for=""><i class="fa-brands fa-js"></i> JS</label>
+        <textarea  id="js-code" onkeyup="run()"></textarea>
+    
+    </div>
+    <div class="right">
+        <label ><i class="fa-solid fa-play"></i> Output</label>
+        <iframe  id="output"></iframe>
+    </div>
+  </div>  
+  <footer>
+    <div class="footer-content">
+        <h3>CONTACT ME</h3>
+        <p><i class="fa fa-phone"> +91 6383818387</i></p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>Designed by <span>AJAY SURYA S</span></p>
+    </div>
+</footer>
+  <script>
+    function run(){
+        let htmlCode = document.getElementById("html-code").value;
+        let cssCode = document.getElementById("css-code").value;
+        let jsCode = document.getElementById("js-code").value;
+        let output = document.getElementById("output");
+
+        output.contentDocument.body.innerHTML = htmlCode +"<style>" +cssCode + "</style>";
+        output.contentWindow.eval(jsCode);
+    }
+  </script>
+</body>
+</html>

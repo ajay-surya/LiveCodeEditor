@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: row;
+    background: url(images/background.png);
+}
+
+
+.side-nav{
+    width: 110px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.5s;
+}
+
+
+.user{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    /* overflow: hidden; */
+    gap: 2px;
+}
+
+.user > div{
+    display: none;
+}
+
+.user h2{
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+.user-img{
+    width: 40px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+
+.star-img{
+    width: 20px;
+    display: none;
+}
+
+
+ul{
+    list-style: none;
+    padding: 0 15px;
+}
+
+ul li{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+ul li img{
+    width: 30px;
+    margin-right: 0px;
+}
+
+
+ul li p{
+    white-space: nowrap;
+    display: none;
+}
+
+.side-nav ul li p a:link {
+    text-decoration: none;
+    color:black;
+}
+
+.side-nav ul li p a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.side-nav ul li p a:hover{
+    color:rgba(238, 138, 39, 0.9);
+    font-weight: 700;
+    
+}
+
+.side-nav:hover{
+    width: 250px;
+}
+
+.side-nav:hover .user div{
+    display: block;
+}
+
+.side-nav:hover .user{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.side-nav:hover .star-img{
+    display: block;
+}
+
+.side-nav:hover .user-img{
+    margin: 0;
+}
+
+
+.side-nav:hover ul li p{
+    display: block;
+}
+
+.side-nav:hover ul li img{
+    margin-right: 10px;
+}
+
+.side-nav:hover ul li{
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hea{
+    color: aqua;
+    text-align: center;
+}
+.left{
+    margin-left: 180px;
+}
+
+.left, .right{
+    flex-basis: 50%;
+    padding: 10px;
+}
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: column;
+
+    }
+    .left{
+        margin-left: 80px;
+    }
+
+    .right{
+        margin-left: 80px;
+        margin-top: 20px;
+    }
+}
+textarea{
+    width: 100%;
+    height: 28%;
+    background: #1f1f1f;
+    color: #fff;
+    padding: 10px 20px;
+    border:0;
+    outline: 0;
+    font-size: 18px;
+}
+
+iframe{
+    width: 100%;
+    height: 95%;
+    
+    background: #fff;
+    border: 0;
+    outline: 0;
+}
+
+label i{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    background: #000;
+    height: 30px;
+}
+
+
+
+
+/*---------------FOOTER CSS------------------------*/
+
+
+footer{
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
